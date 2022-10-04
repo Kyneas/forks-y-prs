@@ -8,8 +8,9 @@ class Product {
   id: number;
   name: string;
   price: number;
-  findProductsBelow(precioBase: number) {
-    return products.find((p) => {
+
+  static findProductsBelow(precioBase: number) {
+    return products.filter((p) => {
       return p.price < precioBase;
     });
   }
